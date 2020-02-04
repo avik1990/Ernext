@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ernext.Dashboard">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/logoview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_marginTopPercent="3%">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_circle_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:text="Register"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_marginTopPercent="2%" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/logoview">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoview"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="3%">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/il_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:layout_widthPercent="80%">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/name"
+                    android:fontFamily="Sans-serif"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/il_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/il_name"
+                android:layout_centerHorizontal="true"
+                app:layout_widthPercent="80%">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/mobile_email"
+                    android:fontFamily="Sans-serif"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/il_mobile"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/il_email"
+                android:layout_centerHorizontal="true"
+                app:layout_widthPercent="80%">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/il_isd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_widthPercent="30%">
+
+                    <EditText
+                        android:id="@+id/et_isd"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/mobile"
+                        android:fontFamily="Sans-serif"
+                        android:hint="Code"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/il_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/il_isd"
+                    app:layout_widthPercent="70%">
+
+                    <EditText
+                        android:id="@+id/et_number"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/mobile"
+                        android:fontFamily="Sans-serif"
+                        android:hint="Mobile"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/il_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/il_mobile"
+                android:layout_centerHorizontal="true"
+                app:layout_widthPercent="80%">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/mobile"
+                    android:fontFamily="Sans-serif"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_regas"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/il_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Rsgister as:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                app:layout_widthPercent="80%" />
+
+            <RadioGroup
+                android:id="@+id/radio_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_regas"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_widthPercent="80%">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Quick Register"
+                    android:textAllCaps="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Register as Food Provider"
+                    android:textAllCaps="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Register as delivery agent"
+                    android:textAllCaps="true" />
+            </RadioGroup>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/tv_terms"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:layout_widthPercent="80%">
+
+                <CheckBox
+                    android:id="@+id/chk_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/chk_box"
+                    android:text="Please accept terms &amp; conditions" />
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_terms"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:layout_widthPercent="80%">
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:theme="@style/ThemeButtonBlue"
+                    android:text="REGISTER"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_widthPercent="50%" />
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_toRightOf="@+id/btn_register"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeButtonGrey"
+                    android:textColor="@color/white"
+                    android:text="CANCEL"
+                    app:layout_widthPercent="50%" />
+            </android.support.percent.PercentRelativeLayout>
+
+
+        </android.support.percent.PercentRelativeLayout>
+    </ScrollView>
+
+
+</android.support.percent.PercentRelativeLayout>

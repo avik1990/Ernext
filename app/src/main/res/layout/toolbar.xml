@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_menu_black_24dp" />
+
+        <Spinner
+            android:id="@+id/sp_places"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/cart_view"
+            android:layout_toRightOf="@+id/btn_menu"
+            android:spinnerMode="dialog"
+            android:prompt="@string/spinner_title"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/cart_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/img_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_notifications_black_24dp" />
+
+            <FrameLayout
+                android:id="@+id/cartvie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/img_notify">
+
+                <ImageView
+                    android:id="@+id/img_notify1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+                <com.ernext.helperclass.CircularTextView
+                    android:id="@+id/tv_cartcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="2dp"
+                    android:textSize="10sp"
+                    android:text="99"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/v_searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_toolbar"
+        android:background="#ebebeb"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="100%">
+
+        <ImageView
+            android:id="@+id/btn_menu1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_search_black_24dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/cart_view1"
+            android:layout_toRightOf="@+id/btn_menu1"
+            android:background="@drawable/boreder"
+            android:hint="Search your dish"
+            android:padding="2dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#858585" />
+
+        <RelativeLayout
+            android:id="@+id/cart_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/img_notify2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/filter" />
+
+            <FrameLayout
+                android:id="@+id/cartvie22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/img_notify2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Filter"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="#858585" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

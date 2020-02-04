@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Ernext</string>
+    <string name="spinner_title">Select Place</string>
+
+    <string-array name="quantity_array">
+        <item>Qty 1</item>
+        <item>Qty 2</item>
+        <item>Qty 3</item>
+        <item>Qty 4</item>
+        <item>Qty 5</item>
+        <item>Qty 6</item>
+        <item>Qty 7</item>
+        <item>Qty 8</item>
+    </string-array>
+
+    <string name="baseurl">https://www.ernextfood.com/api/user/</string>
+    <string name="register">register/</string>
+    <string name="format">format/json/</string>
+
+</resources>
